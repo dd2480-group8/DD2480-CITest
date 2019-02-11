@@ -9,4 +9,9 @@ public class LibraryTest {
         Library classUnderTest = new Library();
         assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
+    @Test
+    public void testShouldBuildMethod() {
+        Library classUnderTest = new Library();
+        assertTrue("shouldBuild should also pass tests and return 'true'", classUnderTest.shouldBuild());
+    }
 }
