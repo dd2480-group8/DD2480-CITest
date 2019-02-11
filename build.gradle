@@ -11,6 +11,20 @@ plugins {
     id 'java-library'
 }
 
+buildScan {
+    termsOfServiceUrl = 'https://gradle.com/terms-of-service';
+    termsOfServiceAgree = 'yes'
+
+    publishAlways()
+
+    def commitID = 'git rev-parse --verify HEAD'.execute().text.trim()
+    if (commitID){
+        buildScan.value "Git commit ID", commitID
+    }
+
+
+}
+
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api 'org.apache.commons:commons-math3:3.6.1'
