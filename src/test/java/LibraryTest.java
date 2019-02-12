@@ -12,6 +12,6 @@ public class LibraryTest {
     @Test
     public void testShouldBuildMethod() {
         Library classUnderTest = new Library();
-        assertTrue("shouldBuild should also pass tests and return 'true'", classUnderTest.shouldBuild());
+        assertFalse("shouldBuild should also pass tests and return 'true'.", classUnderTest.shouldBuild());
     }
 }
